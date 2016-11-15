@@ -1,0 +1,106 @@
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="author", content="https://freelance.ru/Nadin85/")
+		title Loftschool Test - Тишук Надежда
+		//- SEO
+		meta(name="desctiption", content="loftschool_test")
+		meta(name="keywords", content="loftschool_test")
+		//- favicon.ico
+		link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+		link(rel="icon", href="favicon.ico", type="image/x-icon")
+		//- bower css
+		link(rel="stylesheet", href="../bower/normalize-css/normalize.css")
+		//- CSS
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/font-awesome.min.css")
+		link(rel="stylesheet", href="fonts/firasans/firasans.css")
+	body
+		<!-- [if lt IE 7]>
+		p Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.
+		<![endif] -->
+
+		// header
+		header#header
+			.container
+				.user
+					.user-img: img(src="img/my-img.jpg")
+					.user-info
+						.user-name Тишук Надежда Леонидовна
+						.user-email: a(href="mailto:166507@gmail.com") 166507@gmail.com
+					ul.user-social
+						//- Выводим социальные иконки
+						mixin socialList (icon, link, name)
+							li.social-icon: a.social-link(href=link, target="_blank"): i(class=icon, aria-hidden="true"): span.social-icon-name= name
+						+socialList('fa fa-github', 'https://github.com/rainjeck', 'github.com')
+						+socialList('fa fa-skype', 'skype:la.esperanza', 'skype')
+						+socialList('fa fa-vk', 'https://vk.com/tishukn', 'vk.com')
+
+		main
+			// section #about-me
+			section#about-me.section
+				.container
+					h1.section-head О будущем ученике
+					.section-subhead Ребятам из Loftschool будет полезно узнать немного обо мне
+
+					.two-column-grid
+						.column.left
+							.column-container
+								img.column-icon(src="icons/hello.svg")
+								.column-content
+									h3 Немного обо мне
+									p Я живу в Москве (Россия). Мне 31 год. Высшее образование - закончила МГТУ "Станкин". Разработкой сайтов интересуюсь довольно давно. Есть несколько проектов, которые делала для себя или по фрилансу: <a href="http://v-meladze.ru" target="_blank"> v-meladze.ru</a>, <a href="http://florenceguide.ru" target="_blank">florenceguide.ru</a>, <a href="http://zhannabadoeva.com" target="_blank"> zhannabadoeva.com</a>, <a href="http://m-albulov.ru" target="_blank">m-albulov.ru</a>, <a href="http://elenabahtiyarova.ru" target="_blank">elenabahtiyarova.ru</a>, <a href="http://babybenz.net" target="_blank">babybenz.net</a>
+						.column.right
+							.column-container
+								img.column-icon(src="icons/experience.svg")
+								.column-content
+									h3 Мой опыт в разработке
+									p Базовый курс по языку html прошла еще в школе. С этого и началось мое увлечение разработкой сайтов. Больше никаких курсов не проходила и все, что знаю, изучала по книгам, с помощью интернета и видеоуроков. Знаю html, css. Делаю что-то на js с помощью jQuery с помощью Google.
+
+			// section #courses
+			section#courses.section
+				.container
+					h2.section-head Курсы на loftblog
+					.section-subhead которые мне помогут в выполнении этого задания
+
+					// 3 COLUMNS
+					.three-column-grid
+						mixin courseBox (name, desc, time, img, link)
+							// course-box
+							.column
+								.course-box
+									a.course-link(href=link)
+										.course-img: img(src=img)
+										.course-name= name
+									.course-content= desc
+									.course-time
+										i.fa.fa-clock-o(aria-hidden="true")
+										= time
+									.course-check
+										label.course-label
+											input.course-checkbox(type="checkbox", name="checkbox")
+											span.course-check-style: i.fa.fa-check(aria-hidden="true")
+											| Посмотрел
+						+courseBox ('Основы JavaScript', 'Видеокурс о одном из самых популярных языков программирования - JavaScript. Изучая этот курс вы познаете этот прекрасный язык от самых основ.', '24 урока (6 часов 46 минут)', 'img/couses-js.jpg', '#')
+						+courseBox ('Основы JQUERY', 'Видеокурс о одном из самых популярных языков программирования - JavaScript. Изучая этот курс вы познаете этот прекрасный язык от самых основ.', '11 уроков (2 часа 6 минут)', 'img/couses-jquery.jpg', '#')
+						+courseBox ('Базовые элементы страницы', 'Видеокурс по верстке и программированию основных и популярных элементов сайтов. Посмотрев этот курс вы научитесь создавать табы, аккордеон, слайдшоу, слайдер и т.д.', '9 уроков (2 часа 7 минут)', 'img/couses-base.jpg', '#')
+						+courseBox ('Создание адаптивных сайтов', 'В этом курсе вы узнаете как создавать адаптивные сайты, что такое адаптивная верстка и дизайн.', '7 уроков (2 часа 11 минут)', 'img/couses-adaptive.jpg', '#')
+						+courseBox ('Верстка адаптивной css галереи', 'В этом видеокурсе вы изучите инструменты, техники и подходы для web-разработчика, которые помогут вам решать поставленные задачи более быстро и эффективно.', '6 уроков (1 час 9 минут)', 'img/couses-btngen.jpg', '#')
+						+courseBox ('Верстка адаптивной css галереи', 'В этом курсе мы разберем как сверстать адаптивную css галерею. Также познакомимся с Flexbox.', '4 урока (50 минут)', 'img/couses-css.jpg', '#')
+
+					// done box
+					.all-course-done
+						i.fa.fa-check(aria-hidden="true")
+						| Задание выполнено
+
+		// footer
+		footer#footer
+			.container
+				.footer-text А это футер, с текстом внутри. Он должен быть прибит к низу окна браузера,<br/> не зависимо от количества контента на странице и размера окна.
+
+		// scripts
+		script(src="../bower/jquery/dist/jquery.min.js")
+		script(src="js/main.js")
