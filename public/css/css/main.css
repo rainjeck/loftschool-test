@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%; }
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  padding-bottom: 70px;
+  min-height: 100%;
+  width: 100%; }
+
+img {
+  display: block;
+  width: 100%; }
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: #03a9f4;
+  text-decoration: underline; }
+  a:hover {
+    color: #0087c4; }
+
+#header {
+  background-color: #8cc34b;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2); }
+  #header .container {
+    max-width: 1200px;
+    min-width: 970px;
+    margin: 0 auto;
+    padding: 14px 28px; }
+
+#footer {
+  background-color: #212121;
+  box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  #footer .container {
+    max-width: 1200px;
+    min-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 18px 0; }
+  #footer .footer-text {
+    line-height: 1.2;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.502); }
+
+.user {
+  overflow: hidden;
+  position: relative; }
+  .user .user-img {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    float: left; }
+  .user .user-info {
+    margin: 12px 0 0 80px; }
+  .user .user-name {
+    font-size: 21px;
+    color: #fff;
+    font-family: "Fira Sans Medium", sans-serif; }
+  .user .user-email a {
+    font-size: 14px;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.702);
+    text-decoration: none; }
+
+.user-social {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .user-social .social-icon {
+    display: inline-block;
+    margin-left: 20px; }
+  .user-social .social-icon:first-child {
+    margin-left: 0; }
+  .user-social .social-icon-name {
+    font-size: 0px; }
+  .user-social .social-link {
+    font-size: 35px;
+    text-indent: normal;
+    color: rgba(255, 255, 255, 0.702); }
+  .user-social .social-link:hover {
+    color: #fff; }
+
+.section .container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 80px 0; }
+
+.section .section-head {
+  font-size: 42px;
+  color: #212121;
+  line-height: 0.6;
+  text-align: center;
+  margin-bottom: 20px; }
+
+.section .section-subhead {
+  font-size: 21px;
+  color: #727272;
+  line-height: 1.3;
+  text-align: center;
+  font-family: "Fira Sans Light", sans-serif;
+  margin-bottom: 40px; }
+
+#courses {
+  background: url("../img/gplaypattern.png") repeat top left; }
+
+/* TWO COLUMNS */
+.two-column-grid {
+  overflow: hidden; }
+  .two-column-grid .column {
+    width: 50%;
+    float: left; }
+  .two-column-grid .column-container {
+    padding: 0 10px; }
+  .two-column-grid .column-container img {
+    width: auto; }
+  .two-column-grid .column-icon {
+    float: left; }
+  .two-column-grid .column-content {
+    margin-left: 140px;
+    padding: 0 20px;
+    color: #727272;
+    line-height: 1.5; }
+    .two-column-grid .column-content h3 {
+      font-size: 21px;
+      color: #212121;
+      line-height: 1.3; }
+
+/* THREE COLUMNS */
+.three-column-grid .column {
+  display: inline-block;
+  width: 33%;
+  vertical-align: text-top;
+  letter-spacing: -0.3em;
+  position: relative; }
+
+.three-column-grid.done {
+  display: none; }
+
+.course-box {
+  letter-spacing: normal;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  position: relative; }
+  .course-box .course-img {
+    height: 170px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative; }
+  .course-box .course-link {
+    display: block;
+    font-size: 21px;
+    color: #000;
+    line-height: 1.14;
+    margin-bottom: 20px;
+    text-decoration: none; }
+  .course-box .course-link:hover {
+    color: #8cc34b; }
+    .course-box .course-link:hover .course-img:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: #8cc34b;
+      position: absolute;
+      bottom: 0; }
+  .course-box .course-name {
+    padding: 0 20px; }
+  .course-box .course-content {
+    color: #727272;
+    line-height: 1.5;
+    padding: 0 20px;
+    margin-bottom: 20px; }
+  .course-box .course-time {
+    font-family: "Fira Sans Light", sans-serif;
+    color: #b6b6b6;
+    line-height: 1.5;
+    padding: 0 20px;
+    margin-bottom: 20px; }
+    .course-box .course-time i {
+      display: inline-block;
+      margin-right: 5px; }
+  .course-box .course-check {
+    padding: 20px;
+    background-color: #f6f7f2; }
+  .course-box .course-label {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #727272;
+    position: relative;
+    padding-left: 40px; }
+  .course-box .course-label:hover {
+    cursor: pointer; }
+  .course-box .course-checkbox {
+    display: none; }
+  .course-box .course-check-style {
+    display: inline-block;
+    border: 2px solid #b6b6b6;
+    border-radius: 2px;
+    background: #fff;
+    padding: 0;
+    color: #fff;
+    line-height: 0;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: -2px; }
+  .course-box .course-checkbox:checked + .course-check-style {
+    background: #8cc34b;
+    border-color: #8cc34b;
+    color: #fff; }
+  .course-box.done {
+    box-shadow: none; }
+    .course-box.done:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(140, 195, 75, 0.2); }
+
+.all-course-done {
+  font-size: 42px;
+  color: #8cc34b;
+  line-height: 0.6;
+  text-align: center;
+  display: none; }
