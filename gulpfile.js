@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 // конвертируем sass в css в папку public/css
 gulp.task('sassToCss', function(){
-	return gulp.src('dev/**/*.scss')
+	return gulp.src('dev/css/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest('public/css'));
 	});
